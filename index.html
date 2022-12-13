@@ -1,68 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="./style.css">
-  <title>Frontend Mentor | Multi-step form</title>
-<script src="./script.js"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
-  <!-- Feel free to remove these styles or customize in your own stylesheet 👍 -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Frontend Mentor | Multi-step form</title>
+    <script src="./script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Feel free to remove these styles or customize in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <div class="app-wrapper">
+      <!-- sidebar-container -->
 
-</head>
-<body>
+      <div class="sidebar-container">
+        <div class="sidebar-item">
+          <div class="sidebar-number">
+            <button>1</button>
+          </div>
+          <div class="sidebar-label">
+            <span>Step 1</span>
+            <p>Your info</p>
+          </div>
+        </div>
 
-  <div class="app-container">
-    <div class="sidebar">
-      <ul>
-        <li><button>1</button>Step 1 Your info</li>
-        <li><button>2</button>Step 2 Select plan</li>
-        <li><button>3</button>Step 3 Add-ons</li>
-        <li><button>4</button>Step 4 Summary</li>
-      </ul>
+        <div class="sidebar-item">
+          <div class="sidebar-number">
+            <button>2</button>
+          </div>
+          <div class="sidebar-label">
+            <span>Step 2</span>
+            <p>Select plan</p>
+          </div>
+        </div>
+
+        <div class="sidebar-item">
+          <div class="sidebar-number">
+            <button>3</button>
+          </div>
+          <div class="sidebar-label">
+            <span>Step 3</span>
+            <p>Add-ons</p>
+          </div>
+        </div>
+
+        <div class="sidebar-item">
+          <div class="sidebar-number">
+            <button>4</button>
+          </div>
+          <div class="sidebar-label">
+            <span>Step 4</span>
+            <p>Summary</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ################################################ -->
+      <div class="personal-info step-one">
+        <h1>Personal info</h1>
+        <p>Please provide your name, email address, and phone number.</p>
+
+        <form action="">
+          <label for="">Name</label>
+          <br />
+          <input type="text" placeholder="e.g. Stephen King" />
+          <br />
+
+          <label for="">Email Address</label>
+          <br />
+          <input type="text" placeholder="e.g. stephenking@lorem.com" />
+          <br />
+          <label for="">Phone Number</label>
+          <br />
+          <input type="text" placeholder="e.g. +1 234 567 890" />
+          <br />
+          <button class="next-btn">Next step</button>
+        </form>
+      </div>
+      <!-- ################################################ -->
+      <div class="personal-info step-two">
+        <h1>Select your plan</h1>
+        <p>You have the option of monthly or yearly billing.</p>
+
+        <div class="plan-selector step-two" >
+          <div class="plan">
+            <img src="./images/icon-arcade.svg" alt="" />
+            <span>Arcade</span>
+            <p>$9/mo</p>
+          </div>
+          <div class="plan">
+            <img src="./images/icon-advanced.svg" alt="" />
+            <span>Advanced</span>
+            <p>$12/mo</p>
+          </div>
+          <div class="plan">
+            <img src="./images/icon-pro.svg" alt="" />
+            <span>Pro</span>
+            <p>$15/mo</p>
+          </div>
+        </div>
+        <div class="switch-container">
+          <span>Monthly</span>
+          <div>
+            <label class="switch">
+              <input type="checkbox" />
+              <span class="slider"></span>
+            </label>
+          </div>
+          <span>Yearly</span>
+        </div>
+        <button class="back-btn">Go Back</button>
+        <button class="next-btn">Next step</button>
+      </div>
     </div>
 
-  </div>
-
-  <!-- Sidebar start -->
-
-  Step 1
-  Your info
-
-  Step 2
-  Select plan
-
-  Step 3
-  Add-ons
-
-  Step 4
-  Summary
-
-  <!-- Sidebar end -->
-
-  <!-- Step 1 start -->
-
-  Personal info
-  Please provide your name, email address, and phone number.
-
-  Name
-  e.g. Stephen King
-
-  Email Address
-  e.g. stephenking@lorem.com
-
-  Phone Number
-  e.g. +1 234 567 890
-
-  Next Step
-
-  <!-- Step 1 end -->
-
-  <!-- Step 2 start -->
-
-  Select your plan
+    <!-- 
   You have the option of monthly or yearly billing.
 
   Arcade
@@ -78,12 +143,12 @@
   Yearly
 
   Go Back
-  Next Step
+  Next Step -->
 
-  <!-- Step 2 end -->
+    <!-- Step 2 end -->
 
-  <!-- Step 3 start -->
-
+    <!-- Step 3 start -->
+    <!-- 
   Pick add-ons
   Add-ons help enhance your gaming experience.
 
@@ -100,37 +165,37 @@
   +$2/mo
 
   Go Back
-  Next Step
+  Next Step -->
 
-  <!-- Step 3 end -->
+    <!-- Step 3 end -->
 
-  <!-- Step 4 start -->
-
+    <!-- Step 4 start -->
+    <!-- 
   Finishing up
-  Double-check everything looks OK before confirming.
+  Double-check everything looks OK before confirming. -->
 
-  <!-- Dynamically add subscription and add-on selections here -->
-
+    <!-- Dynamically add subscription and add-on selections here -->
+    <!-- 
   Total (per month/year)
 
   Go Back
-  Confirm
+  Confirm -->
 
-  <!-- Step 4 end -->
+    <!-- Step 4 end -->
 
-  <!-- Step 5 start -->
+    <!-- Step 5 start -->
 
-  Thank you!
+    <!-- Thank you!
 
   Thanks for confirming your subscription! We hope you have fun 
   using our platform. If you ever need support, please feel free 
-  to email us at support@loremgaming.com.
+  to email us at support@loremgaming.com. -->
 
-  <!-- Step 5 end -->
-  
+    <!-- Step 5 end -->
+    <!--   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+  </div> -->
+  </body>
 </html>

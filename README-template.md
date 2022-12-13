@@ -63,6 +63,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### What I learned
 
+Oh Good! A LOT! 
 
 
 ### Continued development
@@ -73,10 +74,9 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [How TO - Toggle Switch](https://www.w3schools.com/howto/howto_css_switch.asp) - This helped me create castome check-box-switch
+- [Can I Create This Complex Animated Multi-step Form?](https://www.youtube.com/watch?v=VdqtdKXxKhM&list=LL&index=7&t=1328s) - This is an amazing tutorial which helped me finally understand how to build system to switch between views. I'd recommend it to anyone still learning this concept.
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 
