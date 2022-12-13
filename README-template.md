@@ -63,6 +63,8 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### What I learned
 
+All my life I've been lied, check-box sign for real is border without 2 sides
+
 Oh Good! A LOT! 
 
 

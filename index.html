@@ -74,16 +74,16 @@
         <p>Please provide your name, email address, and phone number.</p>
 
         <form action="">
-          <label for="">Name</label>
+          <label class="personal-info-label">Name</label>
           <br />
           <input type="text" placeholder="e.g. Stephen King" />
           <br />
 
-          <label for="">Email Address</label>
+          <label class="personal-info-label">Email Address</label>
           <br />
           <input type="text" placeholder="e.g. stephenking@lorem.com" />
           <br />
-          <label for="">Phone Number</label>
+          <label class="personal-info-label">Phone Number</label>
           <br />
           <input type="text" placeholder="e.g. +1 234 567 890" />
           <br />
@@ -95,7 +95,7 @@
         <h1>Select your plan</h1>
         <p>You have the option of monthly or yearly billing.</p>
 
-        <div class="plan-selector step-two" >
+        <div class="plan-selector step-two">
           <div class="plan">
             <img src="./images/icon-arcade.svg" alt="" />
             <span>Arcade</span>
@@ -125,28 +125,49 @@
         <button class="back-btn">Go Back</button>
         <button class="next-btn">Next step</button>
       </div>
+
+      <!-- ################################################ -->
+      <!-- step3 -->
+      <!-- ################################################ -->
+      <div class="personal-info step-thrd">
+        <h1>Pick add-ons</h1>
+        <p>Add-ons help enhance your gaming experience.</p>
+
+        <label class="container"
+          ><div class="description">
+            <span>Online service</span>
+            <p>Access to multiplayer games</p>
+            <div class="cost">+1$/mo</div>
+          </div>
+          <input type="checkbox" checked="checked" />
+          <span class="checkbox"></span>
+        </label>
+
+        <label class="container"
+        ><div class="description">
+          <span>Larger storage</span>
+          <p>Extra 1TB of cloud save</p>
+          <div class="cost">+2$/mo</div>
+        </div>
+        <input type="checkbox" checked="checked" />
+        <span class="checkbox"></span>
+      </label>
+
+      <label class="container"
+      ><div class="description">
+        <span>Customizable Profile</span>
+        <p>Custom theme on your profile</p>
+        <div class="cost">+2$/mo</div>
+      </div>
+      <input type="checkbox" checked="checked" />
+      <span class="checkbox"></span>
+    </label>
+
+        <button class="back-btn">Go Back</button>
+        <button class="next-btn">Next step</button>
+      </div>
+      <!-- ################################################ -->
     </div>
-
-    <!-- 
-  You have the option of monthly or yearly billing.
-
-  Arcade
-  $9/mo
-
-  Advanced
-  $12/mo
-
-  Pro
-  $15/mo
-
-  Monthly
-  Yearly
-
-  Go Back
-  Next Step -->
-
-    <!-- Step 2 end -->
-
     <!-- Step 3 start -->
     <!-- 
   Pick add-ons
