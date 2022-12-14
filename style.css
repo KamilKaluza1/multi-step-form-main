@@ -157,6 +157,10 @@ button {
 .step-three{
   display: none;
 }
+
+.step-four{
+  display: none;
+}
 .plan-selector{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -340,4 +344,20 @@ font-size: 14px;
 }
  .total{
   padding: 15px;
+ }
+
+
+ .thank{
+  width:460px;
+  text-align: center;
+  padding: 30px;
+  position: relative;
+  top: 24%;
+  left: 5%;
+ }
+
+ .thank h3{
+  font-size: 30px;
+  padding-top: 30px;
+  padding-bottom: 20px;
  }
