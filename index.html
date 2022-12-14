@@ -13,7 +13,7 @@
     />
     <link rel="stylesheet" href="./style.css" />
     <title>Frontend Mentor | Multi-step form</title>
-    <script src="./script.js"></script>
+    <script src="./script.js" defer ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,13 +23,16 @@
     <!-- Feel free to remove these styles or customize in your own stylesheet 👍 -->
   </head>
   <body>
-    <div class="app-wrapper">
-      <!-- sidebar-container -->
+    <form class="app-wrapper" data-multi-step>
+      
+<!-- ################################################ -->
+<!-- sidebar-container -->
+<!-- ################################################ -->
 
       <div class="sidebar-container">
         <div class="sidebar-item">
           <div class="sidebar-number">
-            <button>1</button>
+            <button type="button" data-nav>1</button>
           </div>
           <div class="sidebar-label">
             <span>Step 1</span>
@@ -39,7 +42,7 @@
 
         <div class="sidebar-item">
           <div class="sidebar-number">
-            <button>2</button>
+            <button type="button" data-nav>2</button>
           </div>
           <div class="sidebar-label">
             <span>Step 2</span>
@@ -49,7 +52,7 @@
 
         <div class="sidebar-item">
           <div class="sidebar-number">
-            <button>3</button>
+            <button type="button" data-nav>3</button>
           </div>
           <div class="sidebar-label">
             <span>Step 3</span>
@@ -59,7 +62,7 @@
 
         <div class="sidebar-item">
           <div class="sidebar-number">
-            <button>4</button>
+            <button type="button" data-nav>4</button>
           </div>
           <div class="sidebar-label">
             <span>Step 4</span>
@@ -67,13 +70,14 @@
           </div>
         </div>
       </div>
-
-      <!-- ################################################ -->
-      <div class="personal-info step-one">
+<!-- ################################################ -->
+<!--      Step 1 start -->
+<!-- ################################################ -->
+      <div class="personal-info step-one " data-step>
         <h1>Personal info</h1>
         <p>Please provide your name, email address, and phone number.</p>
 
-        <form action="">
+        <div action="">
           <label class="personal-info-label">Name</label>
           <br />
           <input type="text" placeholder="e.g. Stephen King" />
@@ -87,11 +91,13 @@
           <br />
           <input type="text" placeholder="e.g. +1 234 567 890" />
           <br />
-          <button class="next-btn">Next step</button>
-        </form>
+          <button type="button" class="next-btn" data-next>Next step</button>
+        </div>
       </div>
-      <!-- ################################################ -->
-      <div class="personal-info step-two">
+<!-- ################################################ -->
+<!--      Step 2 start -->
+<!-- ################################################ -->
+      <div class="personal-info step-two " data-step>
         <h1>Select your plan</h1>
         <p>You have the option of monthly or yearly billing.</p>
 
@@ -122,14 +128,14 @@
           </div>
           <span>Yearly</span>
         </div>
-        <button class="back-btn">Go Back</button>
-        <button class="next-btn">Next step</button>
+        <button class="back-btn" type="button" data-previous>Go Back</button>
+        <button class="next-btn" type="button" data-next>Next step</button>
       </div>
 
-      <!-- ################################################ -->
-      <!-- step3 -->
-      <!-- ################################################ -->
-      <div class="personal-info step-three">
+<!-- ################################################ -->
+<!-- step3 -->
+<!-- ################################################ -->
+      <div class="personal-info step-three " data-step>
         <h1>Pick add-ons</h1>
         <p>Add-ons help enhance your gaming experience.</p>
 
@@ -163,16 +169,15 @@
           <span class="checkbox"></span>
         </label>
 
-        <button class="back-btn">Go Back</button>
-        <button class="next-btn">Next step</button>
+        <button class="back-btn" type="button" data-previous>Go Back</button>
+        <button class="next-btn" type="button" data-next>Next step</button>
       </div>
-      <!-- ################################################ -->
 
-      <!-- ################################################ -->
-      <!-- Step 4 start -->
-      <!-- ################################################ -->
+<!-- ################################################ -->
+<!-- Step 4 start -->
+<!-- ################################################ -->
 
-      <div class="personal-info step-four">
+      <div class="personal-info step-four " data-step>
         <h1>Finishing up</h1>
         <p>Double-check everything looks OK before confirming.</p>
         <div class="table-wrapper">
@@ -197,8 +202,8 @@
             <span>Customizable-profile</span>
             <b>$9/mo</b>
           </div>
-          <button class="back-btn">Go Back</button>
-          <button class="next-btn">Next step</button>
+          <button class="back-btn" type="button" data-previous>Go Back</button>
+          <button class="next-btn" type="button" data-next>Next step</button>
         </div>
         <div class="summary total">
           <span>Total (per month)</span>
@@ -206,10 +211,10 @@
         </div>
       </div>
 
-      <!-- ################################################ -->
-      <!--      Step 5 start -->
-      <!-- ################################################ -->
-      <div class="personal-info step-five">
+<!-- ################################################ -->
+<!--      Step 5 start -->
+<!-- ################################################ -->
+      <div class="personal-info step-five " data-step> 
         <img src="./images/icon-thank-you.svg" alt="" />
         <h3>Thank you!</h3>
         <p>
@@ -218,7 +223,7 @@
           at support@loremgaming.com.
         </p>
       </div>
-    </div>
+    </form> 
 
     <!--   
   <div class="attribution">
