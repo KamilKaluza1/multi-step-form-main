@@ -87,6 +87,8 @@ Use this section to outline areas that you want to continue focusing on in futur
 - [How TO - Toggle Switch](https://www.w3schools.com/howto/howto_css_switch.asp) - This helped me create castome check-box-switch
 - [Can I Create This Complex Animated Multi-step Form?](https://www.youtube.com/watch?v=VdqtdKXxKhM&list=LL&index=7&t=1328s) - This is an amazing tutorial which helped me finally understand how to build system to switch between views. I'd recommend it to anyone still learning this concept.
 
+- [stackoverflow](https://stackoverflow.com/questions/11599666/get-the-value-of-checked-checkbox)
+
 
 ## Author
 

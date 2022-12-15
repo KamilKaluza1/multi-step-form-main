@@ -7,7 +7,7 @@ let currentStep = formSteps.findIndex(step => {
 })
 
 if (currentStep < 0) {
-  currentStep = 0
+  currentStep = 1
   showCurrentStep()
   hoverRest()
   lightBulb();
@@ -55,3 +55,7 @@ function lightBulb() {
     step.classList.toggle("selected", index === currentStep)
   })
 }
+let choice 
+
+const value = document.querySelector('input[name="radio"]:checked').value;
+const plans = document.querySelector
