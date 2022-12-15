@@ -39,6 +39,7 @@ multiStepForm.addEventListener("click", e => {
 function showCurrentStep() {
   formSteps.forEach((step, index) => {
     step.classList.toggle("on", index === currentStep)
+    step.classList.toggle("off", index !== currentStep)
   })
 }
 
@@ -51,7 +52,6 @@ function hoverRest() {
 
 function lightBulb() {
   navSteps.forEach((step, index) => {
- 
     step.classList.toggle("selected", index === currentStep)
   })
 }
@@ -59,3 +59,5 @@ let choice
 
 const value = document.querySelector('input[name="radio"]:checked').value;
 const plans = document.querySelector
+
+console.log(value)
