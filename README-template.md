@@ -63,7 +63,15 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### What I learned
 
-All my life I've been lied, check-box sign for real is border without 2 sides
+All my life I've been lied, check-box sign for real is border without 2 sides.
+
+if you don't add type of button and you press it then your site will be refresh.
+
+custom radio-buttons
+
+custom checkboxes 
+
+destructuring HTML elements by using spread operator 
 
 Oh Good! A LOT! 
 

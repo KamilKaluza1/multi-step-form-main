@@ -85,7 +85,7 @@ img {
   font-weight: 700;
 }
 
-button {
+.sidebar-btn {
   width: 35px;
   height: 35px;
 
@@ -132,9 +132,11 @@ button {
   left: 140px;
   background-color: var(--color-marine-blue);
   cursor: pointer;
+  color: var(--color-white);
+  
 }
 .back-btn {
-  border-radius: 7px;
+  border:none;
   width: 150px;
   height: 50px;
   position: relative;
@@ -152,7 +154,7 @@ button {
   
 }
 
-.plan-selector {
+.plan-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 15px;
@@ -362,7 +364,71 @@ input:checked + .slider:before {
 }
 
 /* ##################################### */
-/* checkbox end here  */
+/* radio start here  */
+/* ##################################### */
+/* The plan */
+.plan {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  font-size: 22px;
+  border: 1px solid ;
+  height: 150px;
+  width:150px
+}
+
+/* Hide the browser's default radio button */
+.plan input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #eee;
+  z-index: -1;
+
+}
+
+/* On mouse-over, add a grey background color */
+.plan:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.plan input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+
+/* Show the indicator (dot/circle) when checked */
+.plan input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.plan .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+.plan-container{display: flex;}
+
+
+
+
+/* ##################################### */
+/* radio end here  */
 /* ##################################### */
 
 .summary {

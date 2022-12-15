@@ -1,11 +1,12 @@
 const multiStepForm = document.querySelector("[data-multi-step]")
 const formSteps = [...multiStepForm.querySelectorAll("[data-step]")]
+const navSteps = [...multiStepForm.querySelectorAll("[data-nav]")]
 let currentStep = formSteps.findIndex(step => {
   return step.classList.contains("active")
 })
 
 if (currentStep < 0) {
-  currentStep = 0
+  currentStep = 1
   showCurrentStep()
   hoverRest()
 
