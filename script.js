@@ -1,14 +1,16 @@
 const multiStepForm = document.querySelector("[data-multi-step]")
 const formSteps = [...multiStepForm.querySelectorAll("[data-step]")]
 const navSteps = [...multiStepForm.querySelectorAll("[data-nav]")]
+
 let currentStep = formSteps.findIndex(step => {
   return step.classList.contains("active")
 })
 
 if (currentStep < 0) {
-  currentStep = 1
+  currentStep = 0
   showCurrentStep()
   hoverRest()
+  lightBulb();
 
 }
 
@@ -28,6 +30,7 @@ multiStepForm.addEventListener("click", e => {
     currentStep += incrementor;
     showCurrentStep();
     hoverRest();
+    lightBulb();
   }
 })
 
@@ -45,3 +48,10 @@ function hoverRest() {
       step.classList.toggle("off", index !== currentStep)
     })
   }
+
+function lightBulb() {
+  navSteps.forEach((step, index) => {
+ 
+    step.classList.toggle("selected", index === currentStep)
+  })
+}

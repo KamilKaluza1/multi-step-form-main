@@ -19,7 +19,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: 0.3s;
+  /* transition: 0.3s; */
 }
 
 body {
@@ -453,4 +453,11 @@ input:checked + .slider:before {
   font-size: 30px;
   padding-top: 30px;
   padding-bottom: 20px;
+}
+
+.selected{
+  background-color: var(--color-pastel-blue);
+  border: var(--color-pastel-blue);
+  color: var(--color-marine-blue);
+  font-weight: 700;
 }
