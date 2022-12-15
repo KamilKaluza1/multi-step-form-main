@@ -148,6 +148,24 @@ img {
   background-color: var(--color-white);
   cursor: pointer;
 }
+.step-three button{
+  position: relative;
+  top: 95px;
+  left: 140px;
+
+
+}
+.problem{
+  position: relative;
+  top: 120px;
+  left: 0px !important;
+}
+.step-one button{
+  position: relative;
+  top: 120px;
+  left: 293px;
+}
+
 .off {
   display: none;
 }
@@ -461,3 +479,4 @@ input:checked + .slider:before {
   color: var(--color-marine-blue);
   font-weight: 700;
 }
+
