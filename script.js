@@ -8,6 +8,7 @@ let adcValue = 9;
 let serValue = 1;
 let larValue = 2;
 let csValue = 2;
+let arcadeSummaryValue;
 
 let currentStep = formSteps.findIndex((step) => {
   return step.classList.contains("active");
@@ -63,6 +64,7 @@ const plan = document.querySelector(".plan-container");
 let choose;
 plan.addEventListener("click", (e) => {
   choose = e.target.value;
+  arcadeSummaryValue = choose;
   console.log(choose);
 });
 let counter = 1;
@@ -93,8 +95,8 @@ monthYear.addEventListener("click", (e) => {
     adcValueInput.value = adcValue;
     // Online service - ser
     const ser = document.querySelector(".ser-value");
-    serValue = adcValue * 10;
-    ser.innerHTML = `$${adcValue}/yr`;
+    serValue = serValue * 10;
+    ser.innerHTML = `$${serValue}/yr`;
     ser.value = serValue;
     // Larger storage - lar
     const lar = document.querySelector(".lar-value");
@@ -129,8 +131,8 @@ monthYear.addEventListener("click", (e) => {
     adcValueInput.value = adcValue;
     // Online service - ser
     const ser = document.querySelector(".ser-value");
-    serValue = adcValue / 10;
-    ser.innerHTML = `$${adcValue}/yr`;
+    serValue = serValue / 10;
+    ser.innerHTML = `$${serValue}/yr`;
     ser.value = serValue;
     // Larger storage - lar
     const lar = document.querySelector(".lar-value");
@@ -146,8 +148,24 @@ monthYear.addEventListener("click", (e) => {
 });
 
 
-const summaryBtn = document.querySelector('summary-btn');
+const summaryBtn = document.querySelector('.summary-btn');
 
 summaryBtn.addEventListener("click", () =>{
+
+  const arcadeSummary = document.querySelector('.arcade-summary');
+  arcadeSummary.innerHTML = `$${arcadeSummaryValue}/mo`;
+
+  const onlineService = document.querySelector('.online');
+  onlineService.innerHTML = `$${serValue}/mo`;
+
+  const storageService = document.querySelector('.storage');
+  storageService.innerHTML = `$${larValue}/mo`;
+
+  const profileService = document.querySelector('.profile');
+  profileService.innerHTML = `$${csValue}/mo`;
+
+  const totalService = document.querySelector('.tota');
+  const tot = serValue+ larValue + csValue + Number(arcadeSummaryValue);
+  totalService.innerHTML = `$${tot}/mo`;
 
 })
