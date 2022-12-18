@@ -8,14 +8,14 @@ let adcValue = 9;
 let serValue = 1;
 let larValue = 2;
 let csValue = 2;
-let arcadeSummaryValue;
+let arcadeSummaryValue = 15;
 
 let currentStep = formSteps.findIndex((step) => {
   return step.classList.contains("active");
 });
 
 if (currentStep < 0) {
-  currentStep = 3;
+  currentStep = 2;
   showCurrentStep();
   hoverRest();
   lightBulb();
@@ -69,12 +69,17 @@ plan.addEventListener("click", (e) => {
 });
 let counter = 1;
 
+
+
+//MonthYear switch between 
 const monthYear = document.querySelector(".month-year");
 
 monthYear.addEventListener("click", (e) => {
   counter++;
   if (counter % 2 === 0) {
     console.log("Year");
+    //summary value 
+    arcadeSummaryValue *=10
     //pro
     const pro = document.querySelector(".pro-value");
     proValue = proValue * 10;
@@ -110,7 +115,8 @@ monthYear.addEventListener("click", (e) => {
     cs.value = csValue;
   } else {
     console.log("month");
-
+    //summary value 
+    arcadeSummaryValue /=10
     //pro
     const pro = document.querySelector(".pro-value");
     proValue = proValue / 10;
@@ -169,3 +175,24 @@ summaryBtn.addEventListener("click", () =>{
   totalService.innerHTML = `$${tot}/mo`;
 
 })
+
+
+let state = 'off'
+const test = document.querySelector(".cs-value");
+test.addEventListener('click', ()=>{
+
+  state==="off"? state = "on": state="off";
+  console.log(state)
+
+})
+
+
+// let serValue = 1;
+// let larValue = 2;
+// let csValue = 2;
+
+const serviceInput = document.querySelector(".service-input");
+const storageInput = document.querySelector(".storage-input");
+const profileInput = document.querySelector(".profile-input");
+
+/// stworzyć proces dodawania i usuwania wartości z totala nie mam pomysłu jak to zrobić nie wiadomo z kąd i can respectfully borrow pattern to doing that kuso omae wa mo shinde iru 
