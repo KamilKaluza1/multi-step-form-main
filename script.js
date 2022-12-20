@@ -15,7 +15,7 @@ let currentStep = formSteps.findIndex((step) => {
 });
 
 if (currentStep < 0) {
-  currentStep = 2;
+  currentStep = 3;
   showCurrentStep();
   hoverRest();
   lightBulb();
@@ -194,5 +194,10 @@ test.addEventListener('click', ()=>{
 const serviceInput = document.querySelector(".service-input");
 const storageInput = document.querySelector(".storage-input");
 const profileInput = document.querySelector(".profile-input");
+const tableWrapper = document.querySelector(".table-wrapper");
 
-/// stworzyć proces dodawania i usuwania wartości z totala nie mam pomysłu jak to zrobić nie wiadomo z kąd i can respectfully borrow pattern to doing that kuso omae wa mo shinde iru 
+
+serviceInput.addEventListener('click', ()=>{
+  console.log('jdfjdsf')
+  document.querySelector(".online-service").classList.add("off")
+})
