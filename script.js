@@ -15,7 +15,7 @@ let currentStep = formSteps.findIndex((step) => {
 });
 
 if (currentStep < 0) {
-  currentStep = 3;
+  currentStep = 2;
   showCurrentStep();
   hoverRest();
   lightBulb();
@@ -165,10 +165,10 @@ summaryBtn.addEventListener("click", () =>{
   onlineService.innerHTML = `$${serValue}/mo`;
 
   const storageService = document.querySelector('.storage');
-  storageService.innerHTML = `$${larValue}/mo`;
+  storageService.innerHTML = `$${csValue}/mo`;
 
   const profileService = document.querySelector('.profile');
-  profileService.innerHTML = `$${csValue}/mo`;
+  profileService.innerHTML = `$${larValue}/mo`;
 
   const totalService = document.querySelector('.tota');
   const tot = serValue+ larValue + csValue + Number(arcadeSummaryValue);
@@ -177,27 +177,21 @@ summaryBtn.addEventListener("click", () =>{
 })
 
 
-let state = 'off'
-const test = document.querySelector(".cs-value");
-test.addEventListener('click', ()=>{
-
-  state==="off"? state = "on": state="off";
-  console.log(state)
-
-})
-
-
-// let serValue = 1;
-// let larValue = 2;
-// let csValue = 2;
-
 const serviceInput = document.querySelector(".service-input");
 const storageInput = document.querySelector(".storage-input");
 const profileInput = document.querySelector(".profile-input");
-const tableWrapper = document.querySelector(".table-wrapper");
 
 
 serviceInput.addEventListener('click', ()=>{
-  console.log('jdfjdsf')
-  document.querySelector(".online-service").classList.add("off")
+  document.querySelector(".online-on").classList.toggle("off")
+  return(serValue === 0 ? serValue = 1 : serValue = 0)
 })
+storageInput.addEventListener('click', ()=>{
+  document.querySelector(".storage-on").classList.toggle("off")
+  return(csValue === 0 ? csValue = 2 : csValue = 0)
+})
+profileInput.addEventListener('click', ()=>{
+  document.querySelector(".profile-on").classList.toggle("off")
+  return(larValue === 0 ? larValue = 3 : larValue = 0)
+})
+
