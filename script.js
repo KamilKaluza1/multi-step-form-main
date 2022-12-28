@@ -183,15 +183,32 @@ const profileInput = document.querySelector(".profile-input");
 
 
 serviceInput.addEventListener('click', ()=>{
-  document.querySelector(".online-on").classList.toggle("off")
-  return(serValue === 0 ? serValue = 1 : serValue = 0)
+  document.querySelector(".online-on").classList.toggle("off");
+  if(adcValue === 9){
+    serValue === 0 ? serValue = 1 : serValue = 0
+  } else{
+    serValue === 0 ? serValue = 10 : serValue = 0
+  }
 })
+
+
+
 storageInput.addEventListener('click', ()=>{
   document.querySelector(".storage-on").classList.toggle("off")
-  return(csValue === 0 ? csValue = 2 : csValue = 0)
+  if(adcValue === 9){
+    csValue === 0 ? csValue = 2 : csValue = 0
+  } else{
+    csValue === 0 ? csValue = 20 : csValue = 0
+  }
 })
+
+
 profileInput.addEventListener('click', ()=>{
   document.querySelector(".profile-on").classList.toggle("off")
-  return(larValue === 0 ? larValue = 3 : larValue = 0)
+  if(adcValue === 9){
+    larValue === 0 ? larValue = 2 : larValue = 0
+  } else{
+    larValue === 0 ? larValue = 20 : larValue = 0
+  }
 })
 
