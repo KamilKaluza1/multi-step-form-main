@@ -455,7 +455,7 @@ input:checked + .slider:before {
   border-radius: 7px;
   padding: 15px;
   width: 460px;
-  height: 210px;
+  height: auto;
 }
 .total {
   padding: 15px;
