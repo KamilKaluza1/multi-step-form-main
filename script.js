@@ -101,17 +101,17 @@ monthYear.addEventListener("click", (e) => {
     // Online service - ser
     const ser = document.querySelector(".ser-value");
     serValue = serValue * 10;
-    ser.innerHTML = `$${serValue}/yr`;
+    ser.innerHTML = `$${10}/yr`;
     ser.value = serValue;
     // Larger storage - lar
     const lar = document.querySelector(".lar-value");
     larValue = larValue * 10;
-    lar.innerHTML = `$${larValue}/yr`;
+    lar.innerHTML = `$${20}/yr`;
     lar.value = larValue;
     // Customizable Profile - cs
     const cs = document.querySelector(".cs-value");
     csValue = csValue * 10;
-    cs.innerHTML = `$${csValue}/yr`;
+    cs.innerHTML = `$${20}/yr`;
     cs.value = csValue;
   } else {
     console.log("month");
@@ -138,22 +138,22 @@ monthYear.addEventListener("click", (e) => {
     // Online service - ser
     const ser = document.querySelector(".ser-value");
     serValue = serValue / 10;
-    ser.innerHTML = `$${serValue}/mo`;
+    ser.innerHTML = `$${1}/mo`;
     ser.value = serValue;
     // Larger storage - lar
     const lar = document.querySelector(".lar-value");
     larValue = larValue / 10;
-    lar.innerHTML = `$${larValue}/mo`;
+    lar.innerHTML = `$${2}/mo`;
     lar.value = larValue;
     // Customizable Profile - cs
     const cs = document.querySelector(".cs-value");
     csValue = csValue / 10;
-    cs.innerHTML = `$${csValue}/mo`;
+    cs.innerHTML = `$${2}/mo`;
     cs.value = csValue;
   }
 });
 
-
+// finishing up 
 const summaryBtn = document.querySelector('.summary-btn');
 
 summaryBtn.addEventListener("click", () =>{
