@@ -14,13 +14,13 @@
 }
 
 * {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   font-size: 16px;
   font-family: "Ubuntu", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* transition: 0.3s; */
+  transition: 0.3s;
 }
 
 body {
@@ -483,6 +483,10 @@ input:checked + .slider:before {
   font-weight: 700;
 }
 
+.plan b {
+  padding-top: 40px;
+}
+
 @media screen and (max-width:400px){
 
   .app-wrapper {
@@ -530,6 +534,7 @@ input:checked + .slider:before {
     width: 90vw;
     left: 5%;
     border-radius: 9px;
+    padding: 15px 20px;
 }
   body{
     height: 40vh;
@@ -540,5 +545,69 @@ input:checked + .slider:before {
     position: relative;
     top: 19vh;
     left: 62%;
+}
+
+  .plan-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  br{
+    display: none;
+  }
+
+ .plan{
+  height: 100px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  
+ }
+
+ .plan b{
+  position: absolute;
+  padding: 0px;
+  top: 25px;
+  left: 70px;
+ }
+
+ .plan p{
+  position: absolute;
+  padding: 0px;
+  top: 50px;
+  left: 70px;
+ }
+
+ .back-btn{
+  top: 105%;
+  left: 0%;
+ }
+ .next-btn{
+  top: 105%;
+  left: 55%;
+ }
+ .container{
+  width: 100%;
+ }
+ .description{
+  padding: 15px 60px 15px  60px;
+ }
+ .step-three button {
+
+  position: absolute;
+  top: 105%;
+  left: 55%;
+}
+.table-wrapper {
+  width: 100%;
+}
+
+.cost {
+  top: 40%;
+  left: 78%;
+}
+.step-five{
+  top:19%
 }
 }

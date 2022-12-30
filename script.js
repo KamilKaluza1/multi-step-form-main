@@ -15,7 +15,7 @@ let currentStep = formSteps.findIndex((step) => {
 });
 
 if (currentStep < 0) {
-  currentStep = 0;
+  currentStep = 1;
   showCurrentStep();
   hoverRest();
   lightBulb();
