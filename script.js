@@ -138,17 +138,17 @@ monthYear.addEventListener("click", (e) => {
     // Online service - ser
     const ser = document.querySelector(".ser-value");
     serValue = serValue / 10;
-    ser.innerHTML = `$${serValue}/yr`;
+    ser.innerHTML = `$${serValue}/mo`;
     ser.value = serValue;
     // Larger storage - lar
     const lar = document.querySelector(".lar-value");
     larValue = larValue / 10;
-    lar.innerHTML = `$${larValue}/yr`;
+    lar.innerHTML = `$${larValue}/mo`;
     lar.value = larValue;
     // Customizable Profile - cs
     const cs = document.querySelector(".cs-value");
     csValue = csValue / 10;
-    cs.innerHTML = `$${csValue}/yr`;
+    cs.innerHTML = `$${csValue}/mo`;
     cs.value = csValue;
   }
 });
@@ -157,22 +157,24 @@ monthYear.addEventListener("click", (e) => {
 const summaryBtn = document.querySelector('.summary-btn');
 
 summaryBtn.addEventListener("click", () =>{
+  let indicator;
+  (adcValue === 9 ? indicator = "mo" : indicator = "yr")
 
   const arcadeSummary = document.querySelector('.arcade-summary');
-  arcadeSummary.innerHTML = `$${arcadeSummaryValue}/mo`;
+  arcadeSummary.innerHTML = `$${arcadeSummaryValue}/${indicator}`;
 
   const onlineService = document.querySelector('.online');
-  onlineService.innerHTML = `$${serValue}/mo`;
+  onlineService.innerHTML = `$${serValue}/${indicator}`;
 
   const storageService = document.querySelector('.storage');
-  storageService.innerHTML = `$${csValue}/mo`;
+  storageService.innerHTML = `$${csValue}/${indicator}`;
 
   const profileService = document.querySelector('.profile');
-  profileService.innerHTML = `$${larValue}/mo`;
+  profileService.innerHTML = `$${larValue}/${indicator}`;
 
   const totalService = document.querySelector('.tota');
   const tot = serValue+ larValue + csValue + Number(arcadeSummaryValue);
-  totalService.innerHTML = `$${tot}/mo`;
+  totalService.innerHTML = `$${tot}/${indicator}`;
 
 })
 
