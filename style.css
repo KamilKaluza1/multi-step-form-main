@@ -173,7 +173,7 @@ img {
   display: none;
 }
 .on{
-  
+  display: static;
 }
 
 .plan-container {
